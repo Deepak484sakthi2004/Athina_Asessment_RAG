@@ -1,6 +1,6 @@
 
 # RAG IMPLEMENTATION FOR INTERNSHIP ASSESSMENT
-![Project output](./demo.webm)
+![Project output](https://youtu.be/fwL2NPKNK6s)
 ## Installation
 
 1. Clone the repository to your local machine:
