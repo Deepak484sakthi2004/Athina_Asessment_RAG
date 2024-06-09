@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        #response, #correct-answer, #relevant-doc, #llm-answer, #score {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        b {
+            color: #007BFF;
+        }
+        li {
+            margin-left: 20px;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chatbot</h1>
+    <br><br>
+    <input type="text" id="question" placeholder="Ask a question">
+    <div class="button-container">
+        <!-- <button id="ask">Ask</button> -->
+        <button id="evaluate">Ask and Evaluate</button>
+        <a href="/view_csv" id="csv-page">View CSV Dataset</a>
+        <a href="/view_evaluation" id="evaluation-page">View Evaluation</a>
+
+    </div>
+    <div id="llm-answer"></div>
+    <div id="correct-answer"></div>
+    <div id="relevant-doc"></div>
+    <div id="score"></div>
+    
+    <script>
+        $(document).ready(function() {
+            // $('#ask').click(function() {
+            //     var question = $('#question').val();
+            //     $.post('/ask', { question: question }, function(data) {
+            //         $('#llm-answer').html("<b>LLM Answer:</b> " + data.response);
+            //         $('#relevant-doc').html("<b>Relevant Document:</b> " + data.doc);
+            //     });
+            // });
+
+            $('#evaluate').click(function() {
+                var question = $('#question').val();
+                $.post('/evaluate', { question: question }, function(data) {
+                    $('#llm-answer').html("<b>LLM Answer:</b> " + data.response);
+                    $('#correct-answer').html("<b>Correct Answer:</b> " + data.correct_ans);
+                    $('#relevant-doc').html("<b>Relevant Document:</b> " + data.doc);
+                    $('#score').html("<b>Accuracy:</b> " + data.evaluation);
+                });
+            });
+
+  
+
+            $('#csv-page').click(function() {
+                window.location.href = '/view_csv';
+            });
+        });
+    </script>
+</body>
+</html>

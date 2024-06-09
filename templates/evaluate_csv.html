@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSV Dataset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSV Dataset</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>question</th>
+                <th>generated_answer</th>
+                <th>evaluation</th>
+                <th>correct_answer</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['question'] }}</td>
+                <td>{{ row['generated_answer'] }}</td>
+                <td>{{ row['evaluation'] }}</td>
+                <td>{{ row['correct_answer'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to Chatbot</a>
+</body>
+</html>
