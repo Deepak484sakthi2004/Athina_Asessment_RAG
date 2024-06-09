@@ -1,6 +1,6 @@
 
 # RAG IMPLEMENTATION FOR INTERNSHIP ASSESSMENT
-![Project output](https://youtu.be/fwL2NPKNK6s)
+[![Project demo](https://img.youtube.com/vi/fwL2NPKNK6s/0.jpg)](https://youtu.be/fwL2NPKNK6s)
 ## Installation
 
 1. Clone the repository to your local machine:
