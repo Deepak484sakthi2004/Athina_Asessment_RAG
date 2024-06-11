@@ -1,8 +1,7 @@
 
 # RAG IMPLEMENTATION FOR INTERNSHIP ASSESSMENT
-[![Project demo](https://youtu.be/ZhJin7r5hF8/0.svg)](https://youtu.be/ZhJin7r5hF8)
 
-[![Project demo](https://img.youtube.com/vi/fwL2NPKNK6s/0.jpg)](https://youtu.be/fwL2NPKNK6s)
+[![Project demo]](https://youtu.be/fwL2NPKNK6s)
 
 ## Installation
 
